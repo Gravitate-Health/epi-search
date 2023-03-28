@@ -11,7 +11,7 @@ app.use(express.urlencoded({
   extended: true
 }));
 
-app.use('/', searchRoutes);
+app.use('/epi-search', searchRoutes);
 
 
 app.listen(PORT,'0.0.0.0', () => {
