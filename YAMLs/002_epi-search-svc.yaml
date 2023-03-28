@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: epi-search
+  annotations:
+    prometheus.io/scrape: 'true'
+    prometheus.io/port: '3000'
+spec:
+  selector:
+    app: epi-search
+  ports:
+  - protocol: TCP
+    port: 3000
+    targetPort: 3000
+  type: ClusterIP

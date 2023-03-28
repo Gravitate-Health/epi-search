@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: epi-search
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: epi-search
+  template:
+    metadata:
+      labels:
+        app: epi-search
+    spec:
+      containers:
+      - name: epi-search
+        image: gravitate-registry.cr.de-fra.ionos.com/epi-search
+        env:
+        - name: FHIR_URL
+          value: "https://fosps.gravitatehealth.eu/epi/api/fhir/Bundle?_format=json"
+        ports:
+        - containerPort: 3000
