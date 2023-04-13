@@ -42,15 +42,28 @@ This command will respond with the port that its being used to run. In this exam
 
 ### Kubernetes deployment
 
-_To be completed_
+For deploying the epi-search module on kubernetes first apply the [001_epi-search-deployment.yaml](https://github.com/Gravitate-Health/epi-search/blob/main/YAMLs/001_epi-search-deployment.yaml)
 
+```bash
+kubectl apply -f ./YAML/001_epi-search-deployment.yaml
+```
+Once the deployment is running, apply the service [002_epi-search-svc.yaml](https://github.com/Gravitate-Health/epi-search/blob/main/YAMLs/002_epi-search-svc.yaml)
 
-- Express enviroment variables
+```bash
+kubectl apply -f ./YAML/002_epi-search-svc.yaml
+```
+Finally apply the virtual service [003_epi-search-vs.yaml](https://github.com/Gravitate-Health/epi-search/blob/main/YAMLs/003_epi-search-vs.yaml)
+
+```bash
+kubectl apply -f ./YAML/003_epi-search-vs.yaml
+```
+
+Enviroment variables
 
 | Environment Variable | description                                   | default                         |
 |----------------------|-----------------------------------------------|---------------------------------|
 | PORT                 | Default port for running the API              | 3000                            |
-| FHIR_URL             | FHIR URL with JSON format to consume from     | https://fosps.gravitatehealth.eu/epi/api/fhir/Bundle?_format=json
+| FHIR_URL             | FHIR URL with JSON format to consume from     | https://fosps.gravitatehealth.eu/epi/api/fhir/Bundle?_format=json |
 
 
 
