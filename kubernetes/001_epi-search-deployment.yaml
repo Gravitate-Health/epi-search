@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: epi-search
-        image: gravitate-registry.cr.de-fra.ionos.com/epi-search
+        image: ghcr.io/gravitate-health/epi-search
         env:
         - name: FHIR_URL
           value: "https://fosps.gravitatehealth.eu/epi/api/fhir/Bundle?_format=json"
