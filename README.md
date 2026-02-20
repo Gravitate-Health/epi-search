@@ -19,7 +19,7 @@ Table of contents
 
 Introduction
 ------------
-Search API that consumes from [FOSPS epi FHIR server](https://fosps.gravitatehealth.eu/epi/api/fhir/Bundle) 
+Search API that consumes from FOSPS epi FHIR server. 
 
 Installation
 ------------
@@ -63,7 +63,7 @@ Enviroment variables
 | Environment Variable | description                                   | default                         |
 |----------------------|-----------------------------------------------|---------------------------------|
 | PORT                 | Default port for running the API              | 3000                            |
-| FHIR_URL             | FHIR URL with JSON format to consume from     | https://fosps.gravitatehealth.eu/epi/api/fhir/Bundle?_format=json |
+| FHIR_URL             | FHIR URL with JSON format to consume from     | http://fhir-server-epi:8080/api/fhir/Bundle?_format=json |
 
 
 

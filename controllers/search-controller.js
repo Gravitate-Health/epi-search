@@ -4,7 +4,7 @@ const searchModule = require('./utils/searchModule')
 function searchByTitle(req, res) {
   const title = req.body.medicine;
 
-  axios.get(process.env.FHIR_URL || "https://fosps.gravitatehealth.eu/epi/api/fhir/Bundle?_format=json")
+  axios.get(process.env.FHIR_URL || "http://fhir-server-epi:8080/api/fhir/Bundle?_format=json")
   .then(response => {
     const leaflet = searchModule.searchLeaflet(title,response.data.entry);
     if (leaflet == null) {

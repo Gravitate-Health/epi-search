@@ -17,6 +17,6 @@ spec:
         image: ghcr.io/gravitate-health/epi-search
         env:
         - name: FHIR_URL
-          value: "https://fosps.gravitatehealth.eu/epi/api/fhir/Bundle?_format=json"
+          value: "http://fhir-server-epi:8080/api/fhir/Bundle?_format=json"
         ports:
         - containerPort: 3000

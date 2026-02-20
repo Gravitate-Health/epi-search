@@ -8,7 +8,7 @@ RUN npm install
 
 ENV PORT 3000
 
-ENV FHIR_URL "https://fosps.gravitatehealth.eu/epi/api/fhir/Bundle?_format=json"
+ENV FHIR_URL "http://fhir-server-epi:8080/api/fhir/Bundle?_format=json"
 
 RUN npm ci --only=production
 
